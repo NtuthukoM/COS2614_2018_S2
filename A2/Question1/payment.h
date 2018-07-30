@@ -6,13 +6,13 @@
 class Payment
 {
 protected:
-    QString type;
+    QString _type;
 
 public:
-    Payment();
     Payment(QString typ);
     QString getType();
     virtual double pay() =0;
+    virtual ~Payment();
 };
 
 #endif // PAYMENT_H

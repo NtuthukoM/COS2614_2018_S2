@@ -2,17 +2,18 @@
 #include <QString>
 
 
-Payment::Payment()
-{
-
-}
 
 Payment::Payment(QString typ)
 {
-    type = typ;
+    _type = typ;
 }
+
 
 QString Payment::getType()
 {
-    return type;
+    return _type;
+}
+
+Payment::~Payment()
+{
 }

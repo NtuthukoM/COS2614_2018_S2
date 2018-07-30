@@ -7,7 +7,7 @@ class Commission :public Payment
 private:
     double commissionRate;
     double totalSales;
-
+    ~Commission();
 public:
     Commission(double cr);
     void addSales(double sv);

@@ -1,7 +1,12 @@
 #include "commission.h"
 
 
-Commission::Commission(double cr)
+Commission::~Commission()
+{
+
+}
+
+Commission::Commission(double cr):Payment("Commission")
 {
     commissionRate = cr;
 }

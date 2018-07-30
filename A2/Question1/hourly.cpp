@@ -1,14 +1,20 @@
 #include "hourly.h"
 
-Hourly::Hourly()
+
+
+Hourly::~Hourly()
 {
 
 }
 
-Hourly::Hourly(double hr)
+Hourly::Hourly(double hr):Payment("Hourly")
 {
-    type = "Hourly";
     hourlyRate = hr;
+}
+
+void Hourly::addHours(double hrs)
+{
+    hours += hrs;
 }
 
 double Hourly::pay()

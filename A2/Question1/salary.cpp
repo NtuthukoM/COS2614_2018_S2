@@ -1,8 +1,12 @@
 #include "salary.h"
 
-Salary::Salary(double sal)
+Salary::~Salary()
 {
-    type = "Salary";
+
+}
+
+Salary::Salary(double sal):Payment("Salary")
+{
     salary = sal;
 }
 

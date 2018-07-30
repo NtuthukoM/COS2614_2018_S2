@@ -13,12 +13,15 @@ Employee::Employee(QString fn, QString sn)
 
 Employee::Employee(const Employee &e)
 {
-
+firstName = e.firstName;
+surname = e.surname;
+id = e.id;
+payment = e.payment;
 }
 
 Employee::~Employee()
 {
-    delete payment;
+    //delete payment;
 }
 
 int Employee::getID()
@@ -34,4 +37,9 @@ QString Employee::getName()
 void Employee::setPayment(Payment *pay)
 {
     payment = pay;
+}
+
+Payment *Employee::getPayment()
+{
+    return payment;
 }

@@ -7,7 +7,7 @@ class Salary :public Payment
 {
 private:
     double salary;
-
+    ~Salary();
 public:
     Salary(double sal);
     double pay();
