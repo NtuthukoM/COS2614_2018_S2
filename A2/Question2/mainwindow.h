@@ -10,6 +10,7 @@
 #include <QLCDNumber>
 #include <QLabel>
 #include <QString>
+#include <QSpinBox>
 
 namespace Ui {
 class MainWindow;
@@ -19,12 +20,18 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 private slots:
-    void onButtonClicked(QString strFunc);
+    void onbtnPlusClicked();
+    void onMinusClicked();
+    void onbtnDivideClicked();
+    void onbtnCloseClicked();
+    void onbtnClearClicked();
+    void onbtnMultiplyClicked();
+
 public:
     QPushButton* btnPlus;
     QPushButton* btnMinus;
-    QLineEdit* txtNum1;
-    QLineEdit* txtNum2;
+    QSpinBox* txtNum1;
+    QSpinBox* txtNum2;
     QPushButton* btnMultiply;
     QPushButton* btnDivide;
     QLCDNumber* output;
@@ -37,6 +44,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QString title = "Simple Calculator";
 };
 
 #endif // MAINWINDOW_H
